@@ -221,12 +221,25 @@ p {
   justify-content: flex-start;
 }
 
+/* Wrapper skaleres alltid større enn viewport — 16:9 video dekker alltid */
+.hero-video-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw;    /* 16:9: bredde styrer høyde */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16:9: høyde styrer bredde */
+  pointer-events: none;
+  overflow: hidden;
+}
+
 .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none;
   border: none;
 }
 
