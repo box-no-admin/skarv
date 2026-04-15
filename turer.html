@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alle turer med Skarv på Helgelandskysten — øyhopping, midnattssol, nordlys, privat charter og mer.">
+  <title>Turer — Skarv</title>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    .page-hero {
+      background: var(--color-ocean);
+      padding: 12rem 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: white;
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .page-hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .page-hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 400;
+      color: var(--color-white);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .page-hero-sub {
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(255,255,255,0.6);
+      max-width: 500px;
+      line-height: 1.75;
+    }
+    .tours-full {
+      padding: 5rem 3rem 7rem;
+      background: white;
+    }
+    .tours-full-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .filter-bar {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 3.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      background: var(--color-sand);
+      border: none;
+      padding: 0.6rem 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--color-ocean);
+      color: white;
+    }
+    .tours-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: #e8e8e4;
+    }
+    @media (max-width: 1024px) { .tours-list { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 640px) { .tours-list { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" role="navigation">
+    <a href="index.html" class="nav-logo">SKARV<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="turer.html" style="color:white;">Turer</a></li>
+      <li><a href="index.html#om-oss">Om oss</a></li>
+      <li><a href="nyheter.html">Nyheter</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Åpne meny"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile-close" style="position:absolute;top:2rem;right:2rem;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;">✕</button>
+    <a href="turer.html">Turer</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="nyheter.html">Nyheter</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+
+  <main>
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <span class="section-label" style="color: var(--color-accent);">Helgelandskysten</span>
+        <h1 class="page-hero-title">Alle turer</h1>
+        <p class="page-hero-sub">
+          Fra korte kveldsturer til flerda­gerse­ventyr —
+          finn opplevelsen som passer deg.
+        </p>
+      </div>
+    </div>
+
+    <section class="tours-full">
+      <div class="tours-full-inner">
+
+        <div class="filter-bar">
+          <button class="filter-btn active">Alle</button>
+          <button class="filter-btn">Dagstur</button>
+          <button class="filter-btn">Halvdag</button>
+          <button class="filter-btn">Privat charter</button>
+          <button class="filter-btn">Sesong: Sommer</button>
+          <button class="filter-btn">Sesong: Vinter</button>
+        </div>
+
+        <div class="tours-list">
+
+          <a href="tur-oeyhopping.html" class="tour-card reveal">
+            <div class="tour-card-image">
+              <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&q=80&auto=format&fit=crop" alt="Øyhopping" loading="lazy">
+              <span class="tour-card-badge featured">Bestselger</span>
+            </div>
+            <div class="tour-card-body">
+              <h2 class="tour-card-title">Øyhopping i verdensarven</h2>
+              <p class="tour-card-desc">Seiler gjennom Vegaøyane UNESCO-verdensarv — øyrike, ærfuglvær og en ro som bare havet kan gi.</p>
+              <div class="tour-card-meta">
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>8 timer</span>
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>2–12 pers.</span>
+              </div>
+            </div>
+            <div class="tour-card-footer">
+              <div class="tour-price"><span class="tour-price-label">Fra</span><span class="tour-price-amount"><sup>kr </sup>3 900</span></div>
+              <span class="tour-reserve-btn">Reserver</span>
+            </div>
+          </a>
+
+          <a href="tur-midnattssol.html" class="tour-card reveal reveal-delay-1">
+            <div class="tour-card-image">
+              <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80&auto=format&fit=crop" alt="Midnattssol" loading="lazy">
+              <span class="tour-card-badge">Sesong: mai–aug</span>
+            </div>
+            <div class="tour-card-body">
+              <h2 class="tour-card-title">Midnattssol­safari</h2>
+              <p class="tour-card-desc">Champagne, stillhet og lys som aldri tar slutt. En kveldsseilas under den brennende midnattshimmelen.</p>
+              <div class="tour-card-meta">
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>4 timer</span>
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>2–8 pers.</span>
+              </div>
+            </div>
+            <div class="tour-card-footer">
+              <div class="tour-price"><span class="tour-price-label">Fra</span><span class="tour-price-amount"><sup>kr </sup>1 950</span></div>
+              <span class="tour-reserve-btn">Reserver</span>
+            </div>
+          </a>
+
+          <a href="tur-privat.html" class="tour-card reveal reveal-delay-2">
+            <div class="tour-card-image">
+              <img src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80&auto=format&fit=crop" alt="Privat charter" loading="lazy">
+              <span class="tour-card-badge">Eksklusivt</span>
+            </div>
+            <div class="tour-card-body">
+              <h2 class="tour-card-title">Privat luksustur</h2>
+              <p class="tour-card-desc">Båten er din for hele dagen. Bestemt rute, tempo og stopp etter dine ønsker — vi tar oss av resten.</p>
+              <div class="tour-card-meta">
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Hel dag</span>
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Inntil 12 pers.</span>
+              </div>
+            </div>
+            <div class="tour-card-footer">
+              <div class="tour-price"><span class="tour-price-label">Fra</span><span class="tour-price-amount"><sup>kr </sup>12 500</span></div>
+              <span class="tour-reserve-btn">Reserver</span>
+            </div>
+          </a>
+
+          <a href="tur-nordlys.html" class="tour-card reveal">
+            <div class="tour-card-image">
+              <img src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80&auto=format&fit=crop" alt="Nordlys" loading="lazy">
+              <span class="tour-card-badge">Sesong: sep–mars</span>
+            </div>
+            <div class="tour-card-body">
+              <h2 class="tour-card-title">Nordlys­seilas</h2>
+              <p class="tour-card-desc">Ute på havet, borte fra lysforurensning — se nordlyset slik det aldri ses fra land.</p>
+              <div class="tour-card-meta">
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>3–5 timer</span>
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>2–8 pers.</span>
+              </div>
+            </div>
+            <div class="tour-card-footer">
+              <div class="tour-price"><span class="tour-price-label">Fra</span><span class="tour-price-amount"><sup>kr </sup>2 400</span></div>
+              <span class="tour-reserve-btn">Reserver</span>
+            </div>
+          </a>
+
+          <a href="tur-fiske.html" class="tour-card reveal reveal-delay-1">
+            <div class="tour-card-image">
+              <img src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=800&q=80&auto=format&fit=crop" alt="Fisketur" loading="lazy">
+              <span class="tour-card-badge">Ny sesong</span>
+            </div>
+            <div class="tour-card-body">
+              <h2 class="tour-card-title">Havet på tallerkenen</h2>
+              <p class="tour-card-desc">Fang din egen middag og få den servert ombord av vår lokale kokk. Unikt og minneverdig.</p>
+              <div class="tour-card-meta">
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>6 timer</span>
+                <span class="tour-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>2–10 pers.</span>
+              </div>
+            </div>
+            <div class="tour-card-footer">
+              <div class="tour-price"><span class="tour-price-label">Fra</span><span class="tour-price-amount"><sup>kr </sup>2 800</span></div>
+              <span class="tour-reserve-btn">Reserver</span>
+            </div>
+          </a>
+
+          <!-- Gavekort-kort -->
+          <div class="tour-card reveal reveal-delay-2" style="background: var(--color-ocean); cursor: default;">
+            <div style="padding: 3rem 2rem; display: flex; flex-direction: column; justify-content: center; height: 100%; min-height: 300px;">
+              <span class="section-label">Gave</span>
+              <h2 class="section-title light" style="margin-bottom: 1rem;">Gi bort<br>en opplevelse</h2>
+              <p style="color: rgba(255,255,255,0.55); font-size: 0.9rem; line-height: 1.75; margin-bottom: 2rem;">Gavekort til Skarv — en gave som aldri glemmes.</p>
+              <a href="gavekort.html" class="btn-primary" style="align-self: flex-start;">
+                Kjøp gavekort
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:1.4rem;">SKARV<span>.</span></a>
+          <p>Eksklusive båtopplevelser langs Helgelandskysten.</p>
+        </div>
+        <div>
+          <span class="footer-col-title">Turer</span>
+          <ul class="footer-links">
+            <li><a href="tur-oeyhopping.html">Øyhopping i verdensarven</a></li>
+            <li><a href="tur-midnattssol.html">Midnattssol­safari</a></li>
+            <li><a href="tur-privat.html">Privat luksustur</a></li>
+            <li><a href="tur-nordlys.html">Nordlys­seilas</a></li>
+            <li><a href="tur-fiske.html">Havet på tallerkenen</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Informasjon</span>
+          <ul class="footer-links">
+            <li><a href="index.html#om-oss">Om oss</a></li>
+            <li><a href="nyheter.html">Nyheter</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Kontakt</span>
+          <ul class="footer-links">
+            <li><a href="mailto:hei@skarv.no">hei@skarv.no</a></li>
+            <li><a href="tel:+4790000000">+47 900 00 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Skarv AS</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

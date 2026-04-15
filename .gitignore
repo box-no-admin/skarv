@@ -1,0 +1,8 @@
+# Video (for stor for GitHub — host separat, f.eks. Cloudflare R2 eller Vimeo)
+*.MP4
+*.mp4
+*.MOV
+*.mov
+
+# Claude Code
+.claude/

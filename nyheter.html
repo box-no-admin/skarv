@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historier, turbeskrivelser og kystkultur fra Skarv på Helgelandskysten.">
+  <title>Nyheter &amp; historier — Skarv</title>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    .page-hero {
+      background: var(--color-ocean);
+      padding: 12rem 3rem 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      bottom: -1px; left: 0; right: 0;
+      height: 80px;
+      background: var(--color-sand);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+    .page-hero-inner { max-width: 1200px; margin: 0 auto; }
+
+    .blog-section {
+      background: var(--color-sand);
+      padding: 5rem 3rem 7rem;
+    }
+    .blog-inner { max-width: 1200px; margin: 0 auto; }
+
+    /* Featured post */
+    .blog-featured {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 0;
+      background: white;
+      margin-bottom: 1.5px;
+      text-decoration: none;
+      overflow: hidden;
+      transition: box-shadow 0.3s ease;
+    }
+    .blog-featured:hover { box-shadow: 0 20px 60px rgba(11,31,42,0.12); }
+
+    .blog-featured-image {
+      overflow: hidden;
+      min-height: 480px;
+    }
+    .blog-featured-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.4,0,0.2,1);
+    }
+    .blog-featured:hover .blog-featured-image img { transform: scale(1.05); }
+
+    .blog-featured-body {
+      padding: 3.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .blog-featured-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 400;
+      color: var(--color-ocean);
+      line-height: 1.25;
+      margin-bottom: 1rem;
+      transition: color 0.2s;
+    }
+    .blog-featured:hover .blog-featured-title { color: var(--color-ocean-light); }
+
+    .blog-featured-excerpt {
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--color-text-muted);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    /* Grid of smaller posts */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: #dcdcd8;
+      margin-bottom: 1.5px;
+    }
+
+    /* Article detail styles (reused for article pages) */
+    .article-detail {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 3rem 7rem;
+    }
+    .article-detail p {
+      font-size: 1rem;
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+      color: #3a4f5a;
+    }
+    .article-detail h2 {
+      font-size: 1.6rem;
+      margin: 2.5rem 0 1rem;
+      color: var(--color-ocean);
+    }
+
+    .blog-tag {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-white);
+      background: var(--color-ocean);
+      padding: 0.3rem 0.75rem;
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .blog-tag.sand {
+      background: var(--color-accent);
+      color: var(--color-ocean);
+    }
+
+    @media (max-width: 1024px) {
+      .blog-featured { grid-template-columns: 1fr; }
+      .blog-featured-image { min-height: 300px; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .blog-section { padding: 4rem 1.5rem 5rem; }
+      .blog-featured-body { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav scrolled" role="navigation">
+    <a href="index.html" class="nav-logo">SKARV<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="turer.html">Turer</a></li>
+      <li><a href="index.html#om-oss">Om oss</a></li>
+      <li><a href="nyheter.html" style="color:white;">Nyheter</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Åpne meny"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile-close" style="position:absolute;top:2rem;right:2rem;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;">✕</button>
+    <a href="turer.html">Turer</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="nyheter.html">Nyheter</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+
+  <main>
+
+    <div class="page-hero">
+      <div class="page-hero-inner">
+        <span class="section-label" style="color: var(--color-accent);">Fra kysten</span>
+        <h1 style="font-family:var(--font-serif);font-size:clamp(2.8rem,5vw,4.5rem);font-weight:400;color:white;line-height:1.1;margin-bottom:1rem;">Historier &amp;<br>opplevelser</h1>
+        <p style="font-family:var(--font-sans);font-size:1rem;font-weight:300;color:rgba(255,255,255,0.6);max-width:480px;line-height:1.75;">
+          Båtens liv, kystens kultur og minnene de som har vært ombord bærer med seg hjem.
+        </p>
+      </div>
+    </div>
+
+    <section class="blog-section">
+      <div class="blog-inner">
+
+        <!-- Featured: Båtens historie -->
+        <a href="artikkel-skarv-historien.html" class="blog-featured reveal">
+          <div class="blog-featured-image">
+            <img
+              src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1200&q=80&auto=format&fit=crop"
+              alt="M/B Skarv — båtens historie"
+              loading="lazy"
+            >
+          </div>
+          <div class="blog-featured-body">
+            <span class="blog-tag sand">Båtens historie</span>
+            <h2 class="blog-featured-title">
+              M/B Skarv — fra fiskebåt<br>til eventyrbåt
+            </h2>
+            <p class="blog-featured-excerpt">
+              Skarv ble bygget i 1987 på Sunnmøre og har levet et liv på havet
+              de fleste båter bare drømmer om. Den har trukket garn i mørketid,
+              ligget trygt i storm og nå bærer den gjester gjennom et av verdens
+              vakreste kystlandskap. Dette er historien om en båt som ble noe mer.
+            </p>
+            <span class="news-card-link" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:var(--font-sans);font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--color-ocean);text-decoration:none;border-bottom:1px solid var(--color-ocean);padding-bottom:2px;">
+              Les historien
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+        </a>
+
+        <!-- Grid: 3 artikler -->
+        <div class="blog-grid">
+
+          <a href="artikkel-midnattssol.html" class="news-card reveal">
+            <div class="news-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80&auto=format&fit=crop"
+                alt="Midnattssol over Helgelandskysten"
+                loading="lazy"
+              >
+            </div>
+            <div class="news-card-body">
+              <span class="news-card-category">Turopplevelse</span>
+              <h3 class="news-card-title">«Vi glemte å sove — solen lot oss ikke»</h3>
+              <p class="news-card-excerpt">
+                En familie fra Berlin kom for tre dager. De ble en uke. Slik beskriver
+                de nattene da midnattssolen malte himmelen i kobber og rosa, og havet
+                ble stille som et speil.
+              </p>
+              <span class="news-card-link">
+                Les mer
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="artikkel-vegaoeyane.html" class="news-card reveal reveal-delay-1">
+            <div class="news-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=800&q=80&auto=format&fit=crop"
+                alt="Vegaøyane verdensarv"
+                loading="lazy"
+              >
+            </div>
+            <div class="news-card-body">
+              <span class="news-card-category">Kystkultur</span>
+              <h3 class="news-card-title">Vegaøyane — der verden stoppet</h3>
+              <p class="news-card-excerpt">
+                UNESCO la til Vegaøyane på verdensarvlisten i 2004. Vi tok turen dit
+                for å forstå hvorfor. Det vi fant var mer enn vakker natur — det var
+                en levende kultur, rotfast i salt og stein.
+              </p>
+              <span class="news-card-link">
+                Les mer
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="artikkel-nordlys.html" class="news-card reveal reveal-delay-2">
+            <div class="news-card-image">
+              <img
+                src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80&auto=format&fit=crop"
+                alt="Nordlys over havet"
+                loading="lazy"
+              >
+            </div>
+            <div class="news-card-body">
+              <span class="news-card-category">Naturopplevelse</span>
+              <h3 class="news-card-title">Nordlys sett fra havet — en annen dimensjon</h3>
+              <p class="news-card-excerpt">
+                Fra land ser du nordlyset. Fra havet er du inne i det. Ingen hustak,
+                ingen bygninger — bare himmelen, vannet og det grønne båndet som danser
+                fra horisont til horisont.
+              </p>
+              <span class="news-card-link">
+                Les mer
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Andre rad: 2 artikler + CTA -->
+        <div class="blog-grid" style="grid-template-columns: 1fr 1fr;">
+
+          <a href="artikkel-fisk.html" class="news-card reveal">
+            <div class="news-card-image" style="aspect-ratio: 16/9;">
+              <img
+                src="https://images.unsplash.com/photo-1519659528534-7fd733a832a0?w=800&q=80&auto=format&fit=crop"
+                alt="Fangst og tilberedning ombord"
+                loading="lazy"
+              >
+            </div>
+            <div class="news-card-body">
+              <span class="news-card-category">Mat &amp; fangst</span>
+              <h3 class="news-card-title">Fra krok til tallerken på tre timer</h3>
+              <p class="news-card-excerpt">
+                Det er noe magisk ved å spise det man selv har fanget — ute på havet,
+                med vind i håret og Helgeland rundt seg. Vår lokale kokk tar hånd om resten.
+              </p>
+              <span class="news-card-link">
+                Les mer
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+          <a href="artikkel-bryllup.html" class="news-card reveal reveal-delay-1">
+            <div class="news-card-image" style="aspect-ratio: 16/9;">
+              <img
+                src="https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?w=800&q=80&auto=format&fit=crop"
+                alt="Bryllupsfeiring på havet"
+                loading="lazy"
+              >
+            </div>
+            <div class="news-card-body">
+              <span class="news-card-category">Privat charter</span>
+              <h3 class="news-card-title">De sa ja med Helgeland som vitne</h3>
+              <p class="news-card-excerpt">
+                Anna og Markus ville feire bryllupet sitt på en måte ingen ville
+                glemme. De valgte Skarv, midnattssolen og stillheten mellom øyene.
+                Det ble akkurat slik de hadde drømt.
+              </p>
+              <span class="news-card-link">
+                Les mer
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:1.4rem;">SKARV<span>.</span></a>
+          <p>Eksklusive båtopplevelser langs Helgelandskysten.</p>
+        </div>
+        <div>
+          <span class="footer-col-title">Turer</span>
+          <ul class="footer-links">
+            <li><a href="tur-oeyhopping.html">Øyhopping i verdensarven</a></li>
+            <li><a href="tur-midnattssol.html">Midnattssol­safari</a></li>
+            <li><a href="tur-privat.html">Privat luksustur</a></li>
+            <li><a href="tur-nordlys.html">Nordlys­seilas</a></li>
+            <li><a href="tur-fiske.html">Havet på tallerkenen</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Informasjon</span>
+          <ul class="footer-links">
+            <li><a href="index.html#om-oss">Om oss</a></li>
+            <li><a href="nyheter.html">Nyheter</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Kontakt</span>
+          <ul class="footer-links">
+            <li><a href="mailto:hei@skarv.no">hei@skarv.no</a></li>
+            <li><a href="tel:+4790000000">+47 900 00 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Skarv AS</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Historien om M/B Skarv — fra fiskebåt på Sunnmøre til eventyrbåt på Helgelandskysten.">
+  <title>M/B Skarv — båtens historie</title>
+  <link rel="stylesheet" href="assets/css/custom.css">
+  <style>
+    .article-hero {
+      position: relative;
+      height: 65vh;
+      min-height: 440px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .article-hero img {
+      position: absolute;
+      inset: 0; width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+    }
+    .article-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(11,31,42,0.88) 100%);
+    }
+    .article-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 3rem 4rem;
+      max-width: 860px;
+    }
+
+    .article-body {
+      background: white;
+      padding: 5rem 3rem 7rem;
+    }
+    .article-body-inner {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .article-content p {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: 1.95;
+      color: #3a4f5a;
+      margin-bottom: 1.75rem;
+    }
+    .article-content p.lead {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--color-ocean);
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .article-content h2 {
+      font-family: var(--font-serif);
+      font-size: 1.75rem;
+      font-weight: 400;
+      color: var(--color-ocean);
+      margin: 3rem 0 1.25rem;
+      line-height: 1.25;
+    }
+    .article-content blockquote {
+      border-left: 3px solid var(--color-accent);
+      padding: 0.5rem 0 0.5rem 2rem;
+      margin: 2.5rem 0;
+    }
+    .article-content blockquote p {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--color-ocean);
+      margin-bottom: 0.5rem;
+    }
+    .article-content blockquote cite {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+    }
+
+    .article-image-full {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      margin: 2.5rem 0;
+    }
+
+    /* Sidebar */
+    .article-sidebar {
+      padding-top: 0.25rem;
+    }
+    .sidebar-card {
+      background: var(--color-sand);
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-card-title {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .sidebar-fact {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+    .sidebar-fact-item {
+      padding-bottom: 0.875rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .sidebar-fact-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .sidebar-fact-label {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-text-muted);
+      margin-bottom: 0.2rem;
+      display: block;
+    }
+    .sidebar-fact-value {
+      font-family: var(--font-sans);
+      font-size: 0.9rem;
+      color: var(--color-ocean);
+    }
+
+    @media (max-width: 900px) {
+      .article-body-inner { grid-template-columns: 1fr; }
+      .article-sidebar { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+      .article-hero-content { padding: 0 1.5rem 3rem; }
+      .article-body { padding: 4rem 1.5rem 5rem; }
+    }
+    @media (max-width: 560px) {
+      .article-sidebar { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav transparent" role="navigation">
+    <a href="index.html" class="nav-logo">SKARV<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="turer.html">Turer</a></li>
+      <li><a href="index.html#om-oss">Om oss</a></li>
+      <li><a href="nyheter.html">Nyheter</a></li>
+      <li><a href="index.html#kontakt" class="nav-cta">Kontakt</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Åpne meny"><span></span><span></span><span></span></button>
+  </nav>
+
+  <div class="nav-mobile">
+    <button class="nav-mobile-close" style="position:absolute;top:2rem;right:2rem;background:none;border:none;cursor:pointer;color:white;font-size:1.5rem;">✕</button>
+    <a href="turer.html">Turer</a>
+    <a href="index.html#om-oss">Om oss</a>
+    <a href="nyheter.html">Nyheter</a>
+    <a href="index.html#kontakt">Kontakt</a>
+  </div>
+
+  <main>
+
+    <div class="article-hero">
+      <img
+        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=1800&q=80&auto=format&fit=crop"
+        alt="M/B Skarv på havet"
+        loading="eager"
+      >
+      <div class="article-hero-overlay" aria-hidden="true"></div>
+      <div class="article-hero-content">
+        <a href="nyheter.html" style="
+          display:inline-flex;align-items:center;gap:0.5rem;
+          font-family:var(--font-sans);font-size:0.7rem;font-weight:500;
+          letter-spacing:0.15em;text-transform:uppercase;
+          color:rgba(255,255,255,0.55);text-decoration:none;
+          margin-bottom:1.5rem;transition:color 0.2s;
+        " onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.55)'">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Nyheter &amp; historier
+        </a>
+        <span style="display:block;font-family:var(--font-sans);font-size:0.65rem;font-weight:500;letter-spacing:0.25em;text-transform:uppercase;color:var(--color-accent);margin-bottom:0.875rem;">Båtens historie</span>
+        <h1 style="
+          font-family:var(--font-serif);
+          font-size:clamp(2.2rem,4vw,3.5rem);
+          font-weight:400;color:white;line-height:1.15;margin-bottom:0.875rem;
+        ">M/B Skarv — fra fiskebåt<br>til eventyrbåt</h1>
+        <p style="font-family:var(--font-sans);font-size:0.85rem;font-weight:300;color:rgba(255,255,255,0.55);">
+          Av redaksjonen &nbsp;·&nbsp; 8 minutters lesing
+        </p>
+      </div>
+    </div>
+
+    <div class="article-body">
+      <div class="article-body-inner">
+
+        <article class="article-content reveal">
+
+          <p class="lead">
+            Det er noe ved gamle båter. De bærer på historier som aldri
+            helt forteller seg selv — du må ut på havet for å høre dem.
+            M/B Skarv er en slik båt.
+          </p>
+
+          <p>
+            Skarv ble bygget i 1987 ved et lite verftet på Sunnmøre, og kjølvannet
+            hennes strekker seg gjennom tiår av norsk kysthistorie. Hun ble opprinnelig
+            konstruert for fiske — robuste linjer, solid tredekk, en motor som aldri
+            gir opp. Ikke designet for komfort, men for å overleve.
+          </p>
+
+          <p>
+            De første 15 årene tilbrakte Skarv på åpent hav. Lofoten, Vesterålen,
+            Helgeland — hun kjente disse farvannene bedre enn de fleste. Kapteinen
+            den gangen var Olav, en kar fra Brønnøysund som hadde arvet fiskeryrket
+            fra sin far, og hans far igjen. For Olav var Skarv ikke bare et arbeidsredskap.
+            Hun var et hjem.
+          </p>
+
+          <h2>Et liv mellom bølgene</h2>
+
+          <p>
+            Rundt årtusenskiftet skiftet Skarv eier for første gang. Den nye eieren,
+            en ingeniør fra Trondheim som drømte om å leve nærmere havet, satte i gang
+            en forsiktig renovering. Tredekket ble skiftet. Kahytten fikk ny innredning.
+            Men essensen — den tunge, ærlige skulderen til en arbeidsbåt — lot han
+            stå urørt.
+          </p>
+
+          <blockquote>
+            <p>
+              «Skarv er ikke vakker på den måten du finner i magasiner.
+              Hun er vakker på den måten et ansikt med mange år og mye sol er vakkert.»
+            </p>
+            <cite>— Tidligere eier, 2003</cite>
+          </blockquote>
+
+          <img
+            class="article-image-full"
+            src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80&auto=format&fit=crop"
+            alt="Helgelandskysten sett fra havet"
+            loading="lazy"
+          >
+
+          <h2>En ny kurs</h2>
+
+          <p>
+            I 2021 ble Skarv kjøpt av familien bak Skarv.no — med ett klart mål:
+            å dele kystlandskapet de hadde vokst opp med, med folk som ennå ikke
+            visste det fantes.
+          </p>
+
+          <p>
+            Det ble gjennomgått en ny renovering, denne gangen mer grundig. Motoren
+            ble oppgradert. Sikkerhets­utstyr ble installert. Kahytten fikk plass til
+            gjester — med komfort som ikke kompromitterer karakteren. En komfyr.
+            En kaffemaskin. Gode seter og et vindusparti som gjør den norske kysten
+            til et levende maleri.
+          </p>
+
+          <p>
+            Men ingenting ble fjernet som ikke måtte fjernes. Skarvs patina —
+            den salthvite bordkledningen, de tunge jernrekkene, lukten av hav og
+            tre — er ikke et design­grep. Det er ekthet. Og det er det turistene
+            husker best.
+          </p>
+
+          <h2>Hva Skarv betyr</h2>
+
+          <p>
+            En skarv er en sjøfugl. Slank, mørk, alltid i bevegelse mellom hav
+            og luft. I norsk tradisjon er skarven et symbol på kysten — ikke på
+            det pittoreske, men på det levende, det ekte, det som er der uansett
+            vær og årstid.
+          </p>
+
+          <p>
+            Det er det vi vil at du skal oppleve om bord.
+          </p>
+
+          <div style="margin-top: 3rem; padding: 2.5rem; background: var(--color-sand); display: flex; flex-direction: column; gap: 1.25rem;">
+            <span class="section-label" style="color: var(--color-ocean);">Kom med oss ut</span>
+            <p style="margin-bottom: 0; font-size: 0.95rem; max-width: 480px;">
+              Alle som stiger ombord på Skarv er med på en del av denne historien.
+              Hvilken tur vil du ta?
+            </p>
+            <a href="turer.html" class="btn-ocean" style="align-self: flex-start;">
+              Se alle turer
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+        </article>
+
+        <!-- Sidebar -->
+        <aside class="article-sidebar reveal reveal-delay-2">
+
+          <div class="sidebar-card">
+            <span class="sidebar-card-title">Om båten</span>
+            <div class="sidebar-fact">
+              <div class="sidebar-fact-item">
+                <span class="sidebar-fact-label">Byggeår</span>
+                <span class="sidebar-fact-value">1987</span>
+              </div>
+              <div class="sidebar-fact-item">
+                <span class="sidebar-fact-label">Opprinnelse</span>
+                <span class="sidebar-fact-value">Sunnmøre, Vestlandet</span>
+              </div>
+              <div class="sidebar-fact-item">
+                <span class="sidebar-fact-label">Lengde</span>
+                <span class="sidebar-fact-value">Ca. 14 meter</span>
+              </div>
+              <div class="sidebar-fact-item">
+                <span class="sidebar-fact-label">Kapasitet</span>
+                <span class="sidebar-fact-value">Inntil 12 gjester</span>
+              </div>
+              <div class="sidebar-fact-item">
+                <span class="sidebar-fact-label">Hjemmehavn</span>
+                <span class="sidebar-fact-value">Brønnøysund, Nordland</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card">
+            <span class="sidebar-card-title">Book en tur</span>
+            <p style="font-family:var(--font-sans);font-size:0.85rem;font-weight:300;color:var(--color-text-muted);line-height:1.75;margin-bottom:1.25rem;">
+              Bli med Skarv ut på Helgelandskysten og skriv din egen del av historien.
+            </p>
+            <a href="turer.html" class="btn-ocean" style="display:block;text-align:center;">
+              Se turer
+            </a>
+          </div>
+
+          <div class="sidebar-card">
+            <span class="sidebar-card-title">Flere historier</span>
+            <div style="display:flex;flex-direction:column;gap:0.875rem;">
+              <a href="artikkel-midnattssol.html" style="font-family:var(--font-sans);font-size:0.85rem;color:var(--color-ocean);text-decoration:none;display:flex;justify-content:space-between;align-items:center;padding-bottom:0.875rem;border-bottom:1px solid #ddd;">
+                Midnattssol­safari
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="artikkel-vegaoeyane.html" style="font-family:var(--font-sans);font-size:0.85rem;color:var(--color-ocean);text-decoration:none;display:flex;justify-content:space-between;align-items:center;padding-bottom:0.875rem;border-bottom:1px solid #ddd;">
+                Vegaøyane — verdensarven
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+              <a href="artikkel-nordlys.html" style="font-family:var(--font-sans);font-size:0.85rem;color:var(--color-ocean);text-decoration:none;display:flex;justify-content:space-between;align-items:center;">
+                Nordlys fra havet
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="font-size:1.4rem;">SKARV<span>.</span></a>
+          <p>Eksklusive båtopplevelser langs Helgelandskysten.</p>
+        </div>
+        <div>
+          <span class="footer-col-title">Turer</span>
+          <ul class="footer-links">
+            <li><a href="tur-oeyhopping.html">Øyhopping i verdensarven</a></li>
+            <li><a href="tur-midnattssol.html">Midnattssol­safari</a></li>
+            <li><a href="tur-privat.html">Privat luksustur</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Informasjon</span>
+          <ul class="footer-links">
+            <li><a href="index.html#om-oss">Om oss</a></li>
+            <li><a href="nyheter.html">Nyheter</a></li>
+            <li><a href="index.html#kontakt">Kontakt</a></li>
+          </ul>
+        </div>
+        <div>
+          <span class="footer-col-title">Kontakt</span>
+          <ul class="footer-links">
+            <li><a href="mailto:hei@skarv.no">hei@skarv.no</a></li>
+            <li><a href="tel:+4790000000">+47 900 00 000</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Skarv AS</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><circle cx="12" cy="12" r="5"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
