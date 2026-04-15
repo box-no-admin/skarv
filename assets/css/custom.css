@@ -223,11 +223,16 @@ p {
 
 .hero-video {
   position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Dekker alltid hele hero uavhengig av skjermformat (16:9) */
+  width: 100vw;
+  height: 56.25vw;   /* 16:9 → bredde styrer høyde */
+  min-height: 100vh;
+  min-width: 177.78vh; /* 16:9 → høyde styrer bredde */
+  pointer-events: none;
+  border: none;
 }
 
 .hero-overlay {
