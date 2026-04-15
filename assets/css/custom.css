@@ -221,25 +221,26 @@ p {
   justify-content: flex-start;
 }
 
-/* Wrapper skaleres alltid større enn viewport — 16:9 video dekker alltid */
+/* Wrapper klipper overflow */
 .hero-video-wrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* iframe skaleres for å dekke hele hero uavhengig av videoformat.
+   Formel: full bredde + høyde = 16/9 * bredde → portrett-video
+   dekker alltid, og Vimeo background=1 cover-fyller iframen. */
+.hero-video {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100vw;
-  height: 56.25vw;    /* 16:9: bredde styrer høyde */
+  height: calc(100vw * 16 / 9);
   min-height: 100vh;
-  min-width: 177.78vh; /* 16:9: høyde styrer bredde */
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.hero-video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  min-width: calc(100vh * 9 / 16);
   border: none;
 }
 
